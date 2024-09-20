@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Acesso ao Portal</h1>
+
+        <div id="registration" class="section">
+            <h2>Cadastro</h2>
+            <input type="text" id="name" placeholder="Nome" />
+            <input type="text" id="cpf" placeholder="CPF (apenas números)" maxlength="14" />
+            <input type="password" id="password" placeholder="Senha" />
+            <button id="register">Cadastrar</button>
+            <button id="goToLogin">Já tenho uma conta</button>
+            <p id="message" class="message"></p>
+        </div>
+
+        <div id="loginSection" class="section" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="loginName" placeholder="Nome" />
+            <input type="password" id="loginPassword" placeholder="Senha" />
+            <button id="login">Login</button>
+            <button id="forgotPassword">Esqueci a senha</button>
+            <p id="loginMessage" class="message"></p>
+            <button id="viewInfo" style="display: none;">Ver Informações Pessoais</button>
+            <button id="goToRegister" style="display: none;">Voltar para Cadastro</button>
+        </div>
+
+        <div id="userInfo" class="section" style="display: none;">
+            <h2>Informações do Usuário</h2>
+            <p id="userName"></p>
+            <p id="userCpf"></p>
+            <p id="userPassword"></p>
+            <button id="backToLogin">Voltar para Login</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
