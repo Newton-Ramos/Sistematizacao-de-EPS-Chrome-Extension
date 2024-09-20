@@ -1,62 +1,38 @@
-Gerenciador de Senhas - Extensão do Chrome
-O Gerenciador de Senhas é uma extensão simples e funcional para o Google Chrome que permite gerenciar seus dados de acesso de forma segura e prática.
+# Gerenciador de Senhas
 
-Funcionalidades
-Cadastro de Usuário: Crie uma conta informando nome, CPF e senha.
-Login: Acesse sua conta com nome e senha.
-Recuperação de Senha: Gere uma senha temporária caso esqueça a original.
-Visualização de Informações: Consulte suas informações pessoais cadastradas.
-Estrutura do Projeto
-bash
-Copiar código
+O Gerenciador de Senhas é uma extensão para o Google Chrome que permite gerenciar o cadastro de usuários online.
+
+## Funcionalidades
+- Cadastro de usuários com nome, CPF e senha.
+- Login de usuários já cadastrados.
+- Geração de senha temporária em caso de esquecimento.
+
+## Estrutura do Projeto
 gerenciador-senhas/
 │
 ├── icons/              # Pasta contendo os ícones da extensão
-│   ├── icon128.png
 │   ├── icon48.png
+│   └── icon128.png
 │
 ├── manifest.json       # Configuração da extensão do Chrome
 ├── popup.html          # HTML da interface do popup
-├── script.js           # Lógica do Gerenciador de Senhas em JavaScript
+├── script.js           # Lógica do gerenciador em JavaScript
 ├── styles.css          # Estilos da interface em CSS
 └── README.md           # Este arquivo de documentação
-Como Instalar Localmente
-Faça o download ou clone este repositório no seu computador.
-Abra o Google Chrome e navegue até chrome://extensions/.
-Ative o Modo do Desenvolvedor (localizado no canto superior direito).
-Clique em "Carregar sem compactação" e selecione a pasta onde o projeto da extensão está localizado.
-A extensão será carregada e aparecerá na lista de extensões do Chrome.
-Como Usar
-Clique no ícone do Gerenciador de Senhas na barra de ferramentas do Chrome.
-Pressione o botão "Cadastrar" para criar uma nova conta.
-Após o cadastro, faça login usando seu nome e senha.
-Caso tenha esquecido a senha, clique em "Esqueci a senha" para gerar uma senha temporária.
-Dica: Mantenha suas senhas seguras e evite usar a mesma senha em diferentes serviços!
 
-Licença
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
+## Como Instalar Localmente
+1. Faça o download ou clone este repositório no seu computador.
+2. Abra o Google Chrome e navegue até `chrome://extensions/`.
+3. Ative o Modo do Desenvolvedor (localizado no canto superior direito).
+4. Clique em "Carregar sem compactação" e selecione a pasta onde o projeto da extensão está localizado.
+5. A extensão será carregada e aparecerá na lista de extensões do Chrome.
 
-Desenvolvido por Newton Ramos.
-│
-├── manifest.json       # Configuração da extensão do Chrome
-├── popup.html          # HTML da interface do popup
-├── script.js           # Lógica do Gerenciador de Senhas em JavaScript
-├── styles.css          # Estilos da interface em CSS
-└── README.md           # Este arquivo de documentação
-Como Instalar Localmente
-Faça o download ou clone este repositório no seu computador.
-Abra o Google Chrome e navegue até chrome://extensions/.
-Ative o Modo do Desenvolvedor (localizado no canto superior direito).
-Clique em "Carregar sem compactação" e selecione a pasta onde o projeto da extensão está localizado.
-A extensão será carregada e aparecerá na lista de extensões do Chrome.
-Como Usar
-Clique no ícone do Gerenciador de Senhas na barra de ferramentas do Chrome.
-Pressione o botão "Cadastrar" para criar uma nova conta.
-Após o cadastro, faça login usando seu nome e senha.
-Caso tenha esquecido a senha, clique em "Esqueci a senha" para gerar uma senha temporária.
-Dica: Mantenha suas senhas seguras e evite usar a mesma senha em diferentes serviços!
+## Como Usar
+1. Clique no ícone do Gerenciador de Senhas na barra de ferramentas do Chrome.
+2. Preencha os campos e pressione o botão para cadastrar ou logar.
+3. Caso tenha esquecido a senha, clique em "Esqueci a senha" para gerar uma senha temporária.
 
-Licença
+## Licença
 Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
 
 Desenvolvido por Newton Ramos.
