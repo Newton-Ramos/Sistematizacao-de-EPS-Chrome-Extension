@@ -40,6 +40,6 @@ Gerenciador-de-Credenciais/
 ```Obs: Não é necessário cadastrar o usuário master.```
 
 ## Licença
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE].
+Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE.txt].
 ##
 Desenvolvido por Newton Ramos - Engenharia de Projeto de Software EPS (Turma: B - 2º sem/2024).
