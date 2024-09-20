@@ -1,9 +1,11 @@
 let users = {};
 let currentUser = null;
 
-function isValidName(name) {
-    return /^[A-Za-zÀ-ÿ\s]+$/.test(name);
-}
+const MASTER_CREDENTIALS = {
+    name: "master",
+    cpf: "00000000000",
+    password: "master"
+};
 
 document.getElementById('register').addEventListener('click', () => {
     const name = document.getElementById('name').value.trim();
@@ -15,10 +17,6 @@ document.getElementById('register').addEventListener('click', () => {
             users[cpf] = { name, cpf, password };
             showMessage("Cadastro realizado com sucesso!", "green", 'message');
             clearInputs();
-            setTimeout(() => {
-                document.getElementById('registration').style.display = 'none';
-                document.getElementById('loginSection').style.display = 'block';
-            }, 1000);
         } else {
             showMessage("CPF já cadastrado. Tente outro.", "red", 'message');
         }
@@ -36,50 +34,34 @@ document.getElementById('login').addEventListener('click', () => {
     const name = document.getElementById('loginName').value.trim();
     const password = document.getElementById('loginPassword').value;
 
-    const user = Object.values(users).find(user => user.name === name && user.password === password);
-    
-    if (user) {
-        showMessage("Login bem-sucedido!", "green", 'loginMessage');
-        currentUser = user;
-        document.getElementById('viewInfo').style.display = 'inline';
-        document.getElementById('goToRegister').style.display = 'none';
+    if (name === MASTER_CREDENTIALS.name && password === MASTER_CREDENTIALS.password) {
+        localStorage.setItem('users', JSON.stringify(users)); // Armazenar usuários
+        window.location.href = 'master.html'; // Redireciona para a página master
     } else {
-        showMessage("Nome ou senha incorretos. Tente novamente.", "red", 'loginMessage');
+        const user = Object.values(users).find(user => user.name === name && user.password === password);
+        
+        if (user) {
+            showMessage("Login bem-sucedido!", "green", 'loginMessage');
+            currentUser = user;
+            displayUserInfo(user);
+            document.getElementById('registration').style.display = 'none';
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('userInfo').style.display = 'block';
+        } else {
+            showMessage("Nome ou senha incorretos. Tente novamente.", "red", 'loginMessage');
+        }
     }
-});
-
-document.getElementById('viewInfo').addEventListener('click', () => {
-    if (currentUser) {
-        displayUserInfo(currentUser);
-        document.getElementById('loginSection').style.display = 'none';
-        document.getElementById('userInfo').style.display = 'block';
-    } else {
-        showMessage("Nenhum usuário logado.", "red", 'loginMessage');
-    }
-});
-
-document.getElementById('forgotPassword').addEventListener('click', () => {
-    const name = document.getElementById('loginName').value.trim();
-    const user = Object.values(users).find(user => user.name === name);
-    
-    if (user) {
-        const tempPassword = generatePassword(12);
-        user.password = tempPassword;
-        showMessage(`Senha temporária gerada: ${tempPassword}`, "orange", 'loginMessage');
-    } else {
-        showMessage("Usuário não encontrado. Verifique o nome.", "red", 'loginMessage');
-    }
-});
-
-document.getElementById('goToRegister').addEventListener('click', () => {
-    document.getElementById('loginSection').style.display = 'none';
-    document.getElementById('registration').style.display = 'block';
 });
 
 document.getElementById('backToLogin').addEventListener('click', () => {
     document.getElementById('userInfo').style.display = 'none';
+    document.getElementById('registration').style.display = 'none';
     document.getElementById('loginSection').style.display = 'block';
 });
+
+function isValidName(name) {
+    return /^[A-Za-zÀ-ÿ\s]+$/.test(name);
+}
 
 document.getElementById('cpf').addEventListener('input', (event) => {
     let cpf = event.target.value.replace(/\D/g, '');
@@ -92,16 +74,6 @@ document.getElementById('cpf').addEventListener('input', (event) => {
 
 function validateCPF(cpf) {
     return /^\d{11}$/.test(cpf);
-}
-
-function generatePassword(length) {
-    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-    let password = "";
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-    }
-    return password;
 }
 
 function showMessage(message, color, elementId) {
@@ -119,9 +91,8 @@ function clearInputs() {
 }
 
 function displayUserInfo(user) {
-    const formattedCpf = formatCPF(user.cpf);
     document.getElementById('userName').innerText = `Nome: ${user.name}`;
-    document.getElementById('userCpf').innerText = `CPF: ${formattedCpf}`;
+    document.getElementById('userCpf').innerText = `CPF: ${formatCPF(user.cpf)}`;
     document.getElementById('userPassword').innerText = `Senha: ${user.password}`;
     document.getElementById('userInfo').style.display = 'block';
 }

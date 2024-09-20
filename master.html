@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master - Gerenciador de Credencial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todos os Usuários</h1>
+        <pre id="userList"></pre>
+        <button id="backToLogin">Voltar ao Login</button>
+    </div>
+    <script>
+        let users = JSON.parse(localStorage.getItem('users')) || {}; // Recuperar usuários
+
+        function displayUsers() {
+            const userListElement = document.getElementById('userList');
+            const userList = Object.values(users).map(user => {
+                return `Nome: ${user.name}, CPF: ${formatCPF(user.cpf)}, Senha: ${user.password}`;
+            }).join('\n');
+
+            userListElement.textContent = userList || "Nenhum usuário cadastrado.";
+        }
+
+        document.getElementById('backToLogin').addEventListener('click', () => {
+            window.location.href = 'popup.html'; // Voltar para a página de login
+        });
+
+        function formatCPF(cpf) {
+            if (cpf.length <= 3) {
+                return cpf;
+            } else if (cpf.length <= 6) {
+                return `${cpf.substring(0, 3)}.${cpf.substring(3)}`;
+            } else if (cpf.length <= 9) {
+                return `${cpf.substring(0, 3)}.${cpf.substring(3, 6)}.${cpf.substring(6)}`;
+            } else {
+                return `${cpf.substring(0, 3)}.${cpf.substring(3, 6)}.${cpf.substring(6, 9)}-${cpf.substring(9, 11)}`;
+            }
+        }
+
+        displayUsers(); // Chama a função para mostrar usuários
+    </script>
+</body>
+</html>

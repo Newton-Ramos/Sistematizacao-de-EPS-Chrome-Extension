@@ -21,6 +21,8 @@ body {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; 
 }
 
 h1 {
@@ -50,7 +52,7 @@ button:hover {
 input {
     margin-top: 10px;
     padding: 10px;
-    width: 100%;
+    width: calc(100% - 20px);
     text-align: center;
     font-size: 16px; 
     border: 1px solid #ccc;
@@ -60,4 +62,31 @@ input {
 .message {
     margin-top: 10px;
     font-size: 14px;
+}
+
+.user-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 20px;
+}
+
+.user-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#userInfo p, .user-table td {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
 }

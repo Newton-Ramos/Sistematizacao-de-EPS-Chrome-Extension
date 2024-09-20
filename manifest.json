@@ -5,7 +5,7 @@
   "description": "Uma extensão para gerenciar cadastro de usuários online.",
   "permissions": [],
   "action": {
-    "default_popup": "index.html",
+    "default_popup": "popup.html",
     "default_icon": {
       "48": "icons/icon48.png"
     }
