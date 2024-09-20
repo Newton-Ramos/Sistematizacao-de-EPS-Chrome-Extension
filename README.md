@@ -20,7 +20,8 @@ Gerenciador-de-Credenciais/
 ├── popup.html          # HTML da interface do popup
 ├── script.js           # Lógica do gerenciador em JavaScript
 ├── styles.css          # Estilos da interface em CSS
-└── README.md           # Este arquivo de documentação
+├── README.md           # Este arquivo de documentação
+└── LICENSE             # Este arquivo da liçença
 ```
 ## Como Instalar Localmente
 1. Faça o download ou clone este repositório no seu computador.
