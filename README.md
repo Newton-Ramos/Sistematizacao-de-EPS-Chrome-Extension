@@ -7,8 +7,9 @@ O Gerenciador de Credenciais é uma extensão para o Google Chrome que permite g
 - Login de usuários já cadastrados.
 - Geração de senha temporária em caso de esquecimento.
 - Para o desenvolvedor, é possível visualizar todos os cadastros realizados fazendo login com a credencial master.
-```bash
+
 ## Estrutura do Projeto
+```bash
 Gerenciador-de-Credenciais/
 │
 ├── icons/              # Pasta contendo os ícones da extensão
