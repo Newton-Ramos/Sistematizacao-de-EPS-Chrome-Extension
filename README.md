@@ -41,5 +41,5 @@ Gerenciador-de-Credenciais/
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE].
-
-Desenvolvido por Newton Ramos.
+##
+Desenvolvido por Newton Ramos - Engenharia de Projetos de Software EPS -  Turma: B / 2024.
