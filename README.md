@@ -37,6 +37,8 @@ Gerenciador-de-Credenciais/
    - Nome: master
    - Senha: master
 
+```Obs: Não é necessário cadastrar o usuário master.```
+
 ## Licença
 Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE].
 
