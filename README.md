@@ -33,6 +33,6 @@ gerenciador-senhas/
 3. Caso tenha esquecido a senha, clique em "Esqueci a senha" para gerar uma senha temporária.
 
 ## Licença
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
+Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo Licença [MIT](LICENSE).
 
 Desenvolvido por Newton Ramos.
