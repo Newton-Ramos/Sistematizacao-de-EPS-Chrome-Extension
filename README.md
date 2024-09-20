@@ -8,6 +8,7 @@ O Gerenciador de Credenciais é uma extensão para o Google Chrome que permite g
 - Geração de senha temporária em caso de esquecimento.
 
 ## Estrutura do Projeto
+```bash
 Gerenciador-de-Credenciais/
 │
 ├── icons/              # Pasta contendo os ícones da extensão
