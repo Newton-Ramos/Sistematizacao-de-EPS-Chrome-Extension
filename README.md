@@ -20,7 +20,7 @@ Gerenciador-de-Credenciais/
 ├── script.js           # Lógica do gerenciador em JavaScript
 ├── styles.css          # Estilos da interface em CSS
 └── README.md           # Este arquivo de documentação
-
+```
 ## Como Instalar Localmente
 1. Faça o download ou clone este repositório no seu computador.
 2. Abra o Google Chrome e navegue até `chrome://extensions/`.
