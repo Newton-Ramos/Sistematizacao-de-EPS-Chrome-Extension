@@ -8,17 +8,7 @@ O Gerenciador de Senhas é uma extensão para o Google Chrome que permite gerenc
 - Geração de senha temporária em caso de esquecimento.
 
 ## Estrutura do Projeto
-gerenciador-senhas/
-│
-├── icons/              # Pasta contendo os ícones da extensão
-│   ├── icon48.png
-│   └── icon128.png
-│
-├── manifest.json       # Configuração da extensão do Chrome
-├── popup.html          # HTML da interface do popup
-├── script.js           # Lógica do gerenciador em JavaScript
-├── styles.css          # Estilos da interface em CSS
-└── README.md           # Este arquivo de documentação
+gerenciador-senhas/ │ ├── icons/ # Pasta contendo os ícones da extensão │ ├── icon48.png │ └── icon128.png │ ├── manifest.json # Configuração da extensão do Chrome ├── popup.html # HTML da interface do popup ├── script.js # Lógica do gerenciador em JavaScript ├── styles.css # Estilos da interface em CSS └── README.md # Este arquivo de documentação
 
 ## Como Instalar Localmente
 1. Faça o download ou clone este repositório no seu computador.
