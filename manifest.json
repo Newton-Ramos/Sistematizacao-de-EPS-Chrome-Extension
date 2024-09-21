@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Cadastro Online",
+  "name": "Gerenciador de Credencial",
   "version": "1.0",
-  "description": "Uma extensão para gerenciar cadastro de usuários online.",
+  "description": "Uma extensão para gerenciar credenciais de usuários online.",
   "permissions": [],
   "action": {
     "default_popup": "popup.html",

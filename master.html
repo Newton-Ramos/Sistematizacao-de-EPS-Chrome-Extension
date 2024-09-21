@@ -18,8 +18,8 @@
         function displayUsers() {
             const userListElement = document.getElementById('userList');
             const userList = Object.values(users).map(user => {
-                return `Nome: ${user.name}, CPF: ${formatCPF(user.cpf)}, Senha: ${user.password}`;
-            }).join('\n');
+                return `Nome: ${user.name}\nCPF: ${formatCPF(user.cpf)}\nData de Nascimento: ${user.birthdate}\nEndereço: ${user.address}\nSenha: ${user.password}`;
+            }).join('\n\n');
 
             userListElement.textContent = userList || "Nenhum usuário cadastrado.";
         }

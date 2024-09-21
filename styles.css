@@ -34,11 +34,19 @@ h1 {
     margin-bottom: 20px;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #0056b3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -46,15 +54,14 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #004494;
 }
 
 input {
     margin-top: 10px;
     padding: 10px;
     width: calc(100% - 20px);
-    text-align: center;
-    font-size: 16px; 
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -64,29 +71,16 @@ input {
     font-size: 14px;
 }
 
-.user-table {
-    margin-top: 20px;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.user-table th, .user-table td {
-    padding: 12px;
-    border: 1px solid #ccc;
+#userInfo p {
+    font-size: 18px;
+    margin: 10px 0;
     text-align: left;
-    font-size: 20px;
+    width: 100%;
 }
 
-.user-table th {
-    background-color: #007bff;
-    color: white;
-}
-
-#userInfo p, .user-table td {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.user-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+#randomPassword {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+    margin-top: 10px;
 }
